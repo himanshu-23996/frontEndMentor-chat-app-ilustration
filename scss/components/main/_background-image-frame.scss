@@ -1,0 +1,18 @@
+.main {
+    .bg-img-top {
+        z-index: -10;
+        // Background
+        background: $moderate-violet;
+        // Border
+        border-radius: 0% 0% 90% 0% / 0% 0% 90% 0%;
+    }
+    .bg-img-bottom {
+        z-index: -10;
+        // Sizing
+        width: 50%;
+        // Background
+        background: $grayish-blue;
+        // Border
+        border-radius: 90% 0% 0% 0% / 90% 0% 0% 0%;
+    }
+}
