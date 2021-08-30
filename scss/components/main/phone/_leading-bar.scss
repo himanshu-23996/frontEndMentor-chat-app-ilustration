@@ -1,0 +1,93 @@
+.phone {
+    &__top-panel {
+        // Upper white Camera Section
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            // Sizing
+            width: 60%;
+            height: rem(30);
+            // Border
+            border-radius: 50px;
+            // Background
+            background-color: black;
+            // Positioning
+            top: -15%;
+            left: 20%;
+        }
+        // Background 
+        background-image: linear-gradient(to right, $light-violet, $light-magenta);
+        // Border
+        border-radius: 10px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        // Positioning
+        padding: rem(30) rem(20) rem(15) rem(20);
+        // Display
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        align-content: center;
+        justify-content: flex-start;
+        justify-items: center;
+        grid-template-columns: auto auto auto 1fr auto;
+        grid-gap: 5px;
+        &__left-arrow {
+            &__holder {
+                // Sizing
+                width: 10px;
+                &__arrow {
+                    // Shape
+                    clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
+                    background: white;
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+        &__profile-image {
+            // Display - Centering image horizontally
+            display: flex;
+            align-items: center;
+            &__image {
+                // Border
+                border-radius: 50%;
+                border: 2px solid $pale-violet;
+                // Sizing
+                width: 45px;
+            }
+        }
+        &__name-and-availability {
+            &__name {
+                // Font Settings
+                color: white;
+            }
+            &__availability {
+                // Font Settings
+                font-size: 0.8rem;
+                color: $pale-violet;
+            }
+        }
+        &__three-point-btn {
+            // Placing it at last
+            justify-self: flex-end;
+            // Sizing
+            width: 20px;
+            height: 25px;
+            // Display for three children
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-end;
+            &__point {
+                // Shape
+                border-radius: 50%;
+                background-color: white;
+                // Sizing
+                width: 5px;
+                height: 5px;
+            }
+        }
+    }
+}

@@ -38,7 +38,7 @@ button {
 @use "sass:math";
 .wrapper {
   margin: 0 auto;
-  padding: 1.875rem;
+  padding: 0.625rem;
 }
 
 @use "sass:math";
@@ -55,8 +55,82 @@ button {
   border-radius: 90% 0% 0% 0% / 90% 0% 0% 0%;
 }
 
-.main {
-  background-color: white;
+.phone__top-panel {
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, right top, from(#8838ff), to(#e942ff));
+  background-image: linear-gradient(to right, #8838ff, #e942ff);
+  border-radius: 10px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 1.875rem 1.25rem 0.9375rem 1.25rem;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  justify-items: center;
+  -ms-grid-columns: auto auto auto 1fr auto;
+      grid-template-columns: auto auto auto 1fr auto;
+  grid-gap: 5px;
+}
+
+.phone__top-panel::before {
+  position: absolute;
+  content: "";
+  width: 60%;
+  height: 1.875rem;
+  border-radius: 50px;
+  background-color: black;
+  top: -15%;
+  left: 20%;
+}
+
+.phone__top-panel__left-arrow__holder {
+  width: 10px;
+}
+
+.phone__top-panel__left-arrow__holder__arrow {
+  -webkit-clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
+          clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
+  background: white;
+  width: 15px;
+  height: 15px;
+}
+
+.phone__top-panel__profile-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.phone__top-panel__profile-image__image {
+  border-radius: 50%;
+  border: 2px solid #d89eff;
+  width: 45px;
+}
+
+.phone__top-panel__name-and-availability__name {
+  color: white;
+}
+
+.phone__top-panel__name-and-availability__availability {
+  font-size: 0.8rem;
+  color: #d89eff;
+}
+
+.phone__top-panel__three-point-btn {
+  justify-self: flex-end;
+  width: 20px;
+  height: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,10 +138,67 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.phone__top-panel__three-point-btn__point {
+  border-radius: 50%;
+  background-color: white;
+  width: 5px;
+  height: 5px;
+}
+
+.phone__text-form {
+  background-color: white;
+  border-radius: 100px;
+  margin: 1.25rem auto;
+  padding: 0.625rem;
+  width: 85%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.875rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.phone__text-form__input {
+  font-size: 0.75rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-inline: 1.5625rem;
+}
+
+.phone__text-form__submit {
+  border-radius: 50%;
+  background-color: #3e2753;
+  width: 30px;
+  height: 100%;
+}
+
+.phone__text-form__submit__chevron {
+  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
+          clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  margin: 0 auto;
+  margin-left: 5px;
+}
+
+.phone {
+  border: 20px solid black;
+  border-radius: 50px;
+  background-color: #f5f3f7;
 }
 
 .main .page-text {

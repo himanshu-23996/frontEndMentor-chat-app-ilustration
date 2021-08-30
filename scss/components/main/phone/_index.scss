@@ -1,0 +1,11 @@
+@import './leading-bar';
+@import './chat-section';
+@import './input-section';
+.phone {
+    // Border
+    border: 20px solid black;
+    // Border
+    border-radius: 50px;
+    // Background
+    background-color: $light-grayish-violet;
+}

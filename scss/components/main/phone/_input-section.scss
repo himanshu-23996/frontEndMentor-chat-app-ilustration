@@ -1,0 +1,46 @@
+.phone {
+    &__text-form {
+        // Background
+        background-color: white;
+        // Border
+        border-radius: 100px;
+        // Positioning
+        margin: rem(20) auto;
+        padding: rem(10);
+        // Sizing
+        width: 85%;
+        height: 50px;
+        // Display --> Adjusting childernss' display
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__input {
+            // Font Settings
+            font-size: rem(12);
+            // Sizing
+            width: fit-content;
+            // Positioning
+            padding-inline: rem(25);
+        }
+        &__submit {
+            // Border
+            border-radius: 50%;
+            // Background
+            background-color: $very-dark-desaturated-violet;
+            // Sizing
+            width: 30px;
+            height: 100%;
+            &__chevron {
+                // Background --> for the chevron shape and color
+                clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
+                background-color: white;
+                // Sizing
+                width: 15px;
+                height: 15px;
+                // Positioning
+                margin: 0 auto;
+                margin-left: 5px;
+            }
+        }
+    }
+}
