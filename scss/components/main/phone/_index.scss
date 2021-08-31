@@ -11,6 +11,6 @@
     // Sizing
     width: 95%;
     @include breakpoint(small) {
-        width: 400px;
+        min-width: 400px;
     }
 }

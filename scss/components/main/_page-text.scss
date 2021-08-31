@@ -9,9 +9,9 @@
             text-align: center;
             // Positioning
             margin-top: rem(45);
-            @include breakpoint(large) {
+            @include breakpoint(medium) {
                 // Sizing
-                width: 40%;
+                max-width: 40%;
                 // DIsplay
                 align-items: flex-start;
                 gap: rem(20);
@@ -19,6 +19,7 @@
                 text-align: left;
                 // Positioning
                 margin-top: rem(45);
+                margin-left: rem(100);
             }
             // Child Elements
             &__heading {
