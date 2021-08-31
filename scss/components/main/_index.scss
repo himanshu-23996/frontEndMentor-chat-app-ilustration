@@ -1,3 +1,13 @@
 @import './background-image-frame';
 @import './phone/index';
-@import './page-text'
+@import './page-text';
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include breakpoint(medium) {
+        flex-direction: row;
+        gap: 9%;
+        padding-inline: 5%;
+    }
+}

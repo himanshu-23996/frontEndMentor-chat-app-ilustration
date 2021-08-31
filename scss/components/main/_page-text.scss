@@ -1,21 +1,38 @@
-.main {
-    .page-text {
-        // DIsplay
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: rem(20);
-        // Font Settings
-        text-align: center;
-        // Child Elements
-        &__heading {
-            // h1
+    .main {
+        .page-text {
+            // DIsplay
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: rem(20);
             // Font Settings
-            color: $very-dark-desaturated-violet;
-        }
-        &__description {
-            // p
-            color: $dark-grayish-violet;
+            text-align: center;
+            // Positioning
+            margin-top: rem(45);
+            @include breakpoint(large) {
+                // Sizing
+                width: 40%;
+                // DIsplay
+                align-items: flex-start;
+                gap: rem(20);
+                // Font Settings
+                text-align: left;
+                // Positioning
+                margin-top: rem(45);
+            }
+            // Child Elements
+            &__heading {
+                // h1
+                // Font Settings
+                font-size: 2.5rem;
+                font-weight: 500;
+                color: $very-dark-desaturated-violet;
+            }
+            &__description {
+                // p
+                color: $dark-grayish-violet;
+                // Font Settings
+                line-height: rem(25);
+            }
         }
     }
-}

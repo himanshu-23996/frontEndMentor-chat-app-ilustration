@@ -38,21 +38,49 @@ button {
 @use "sass:math";
 .wrapper {
   margin: 0 auto;
-  padding: 0.625rem;
+  padding: 5rem 0.625rem;
 }
 
 @use "sass:math";
-.main .bg-img-top {
-  z-index: -10;
-  background: #9241c8;
-  border-radius: 0% 0% 90% 0% / 0% 0% 90% 0%;
+.main {
+  position: relative;
+  overflow: hidden;
 }
 
-.main .bg-img-bottom {
-  z-index: -10;
-  width: 50%;
-  background: #c6cacd;
-  border-radius: 90% 0% 0% 0% / 90% 0% 0% 0%;
+.main::before {
+  position: absolute;
+  content: "";
+  z-index: -2;
+  border-radius: 0% 0% 50% 50% / 0% 0% 50% 50%;
+  background-image: linear-gradient(45deg, #8838ff, #e942ff);
+  width: 500px;
+  height: 50%;
+  top: 0;
+  left: -35%;
+}
+
+@media (min-width: 40em) {
+  .main::before {
+    left: -10%;
+  }
+}
+
+.main::after {
+  position: absolute;
+  content: "";
+  z-index: -2;
+  border-radius: 50% 50% 0% 0% / 50% 50% 0% 0%;
+  background-color: #c6cacd;
+  width: 500px;
+  height: 50%;
+  bottom: 0;
+  right: -35%;
+}
+
+@media (min-width: 40em) {
+  .main::after {
+    right: -10%;
+  }
 }
 
 .phone__top-panel {
@@ -86,7 +114,7 @@ button {
   width: 60%;
   height: 1.875rem;
   border-radius: 50px;
-  background-color: black;
+  background-color: white;
   top: -15%;
   left: 20%;
 }
@@ -152,6 +180,107 @@ button {
   height: 5px;
 }
 
+.phone__chat-section {
+  margin-top: 1.25rem;
+  font-size: 0.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+.phone__chat-section__left__text {
+  border-radius: 15px;
+  border-bottom-left-radius: 5px;
+  margin-left: 0.625rem;
+  padding: 0.625rem;
+  background-color: #c6cacd;
+  color: #9241c8;
+  max-width: 60%;
+}
+
+.phone__chat-section__left__price {
+  border-radius: 15px;
+  border-bottom-left-radius: 5px;
+  margin-left: 0.625rem;
+  padding: 0.625rem;
+  max-width: 75%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e942ff), to(#8838ff));
+  background-image: linear-gradient(to right, #e942ff, #8838ff);
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -ms-grid-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.phone__chat-section__left__price__ring {
+  border-radius: 50%;
+  border: 2px solid #e570ff;
+  width: 20px;
+  height: 20px;
+}
+
+.phone__chat-section__left__price__text {
+  color: #d89eff;
+  font-size: 1rem;
+  padding-left: 0.9375rem;
+}
+
+.phone__chat-section__left__price__cash {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.phone__chat-section__right {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.phone__chat-section__right__text {
+  border-radius: 15px;
+  border-bottom-right-radius: 5px;
+  margin-right: 0.625rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 0.625rem;
+  padding-left: 1.25rem;
+  background-color: white;
+  -webkit-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.1);
+  max-width: 60%;
+}
+
+.phone__chat-section__right__image-holder {
+  margin-right: 0.625rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 0.625rem;
+}
+
+.phone__chat-section__right__image-holder__image {
+  display: block;
+  border-radius: 20px;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
 .phone__text-form {
   background-color: white;
   border-radius: 100px;
@@ -196,9 +325,16 @@ button {
 }
 
 .phone {
-  border: 20px solid black;
+  border: 20px solid white;
   border-radius: 50px;
   background-color: #f5f3f7;
+  width: 95%;
+}
+
+@media (min-width: 400px) {
+  .phone {
+    width: 400px;
+  }
 }
 
 .main .page-text {
@@ -214,12 +350,52 @@ button {
           align-items: center;
   gap: 1.25rem;
   text-align: center;
+  margin-top: 2.8125rem;
+}
+
+@media (min-width: 71.875em) {
+  .main .page-text {
+    width: 40%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 1.25rem;
+    text-align: left;
+    margin-top: 2.8125rem;
+  }
 }
 
 .main .page-text__heading {
+  font-size: 2.5rem;
+  font-weight: 500;
   color: #3e2753;
 }
 
 .main .page-text__description {
   color: #a39daa;
+  line-height: 1.5625rem;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 40em) {
+  .main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 9%;
+    padding-inline: 5%;
+  }
 }

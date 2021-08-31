@@ -1,0 +1,102 @@
+.phone {
+    &__chat-section {
+        // Positioning
+        margin-top: rem(20);
+        // FOnt Settings
+        font-size: 0.7rem;
+        // Display
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+        &__left {
+            &__text {
+                // Border
+                border-radius: 15px;
+                border-bottom-left-radius: 5px;
+                // Positioning
+                margin-left: rem(10);
+                padding: rem(10);
+                // Background
+                background-color: $grayish-blue;
+                // Font Settings
+                color: $moderate-violet;
+                // SIzing
+                max-width: 60%;
+            }
+            &__price {
+                // Border
+                border-radius: 15px;
+                border-bottom-left-radius: 5px;
+                // Positioning
+                margin-left: rem(10);
+                padding: rem(10);
+                // SIzing
+                max-width: 75%;
+                // Background
+                background-image: linear-gradient(to right, $light-magenta, $light-violet);
+                // Display
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: auto 1fr auto;
+                align-content: center;
+                align-items: center;
+                &__ring {
+                    // Border 
+                    border-radius: 50%;
+                    border: 2px solid $very-light-magenta;
+                    // SIzing
+                    width: 20px;
+                    height: 20px;
+                }
+                &__text {
+                    // Font Settings
+                    color: $pale-violet;
+                    font-size: 1rem;
+                    // Positioning
+                    padding-left: rem(15);
+                }
+                &__cash {
+                    // Font Settings
+                    color: white;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+            }
+        }
+        &__right {
+            align-self: flex-end;
+            &__text {
+                // Border
+                border-radius: 15px;
+                border-bottom-right-radius: 5px;
+                // Positioning
+                margin-right: rem(10);
+                align-self: flex-end;
+                padding: rem(10);
+                padding-left: rem(20);
+                // BAckground
+                background-color: white;
+                box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.1);
+                // SIzing
+                max-width: 60%;
+            }
+            &__image-holder {
+                // Positioning
+                margin-right: rem(10);
+                align-self: flex-end;
+                // DIsplay
+                display: flex;
+                justify-content: flex-end;
+                gap: rem(10);
+                &__image {
+                    // Display
+                    display: block;
+                    // Border
+                    border-radius: 20px;
+                    width: rem(70);
+                    height: rem(70);
+                }
+            }
+        }
+    }
+}
