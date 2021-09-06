@@ -56,7 +56,7 @@ button {
   width: 500px;
   height: 50%;
   top: 0;
-  left: calc(2vw - 85%);
+  left: calc(-300px);
 }
 
 @media (min-width: 40em) {
@@ -74,7 +74,7 @@ button {
   width: 500px;
   height: 50%;
   bottom: 0;
-  right: calc(2vw - 85%);
+  right: calc(-300px);
 }
 
 @media (min-width: 40em) {

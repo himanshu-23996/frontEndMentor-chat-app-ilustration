@@ -15,7 +15,7 @@
         height: 50%;
         // Positioning
         top: 0;
-        left: calc(2vw - 85%);
+        left: calc(-300px);
         @include breakpoint(medium) {
             left: -10%;
         }
@@ -33,7 +33,7 @@
         height: 50%;
         // Positioning
         bottom: 0;
-        right: calc(2vw - 85%);
+        right: calc(-300px);
         @include breakpoint(medium) {
             right: -10%;
         }
