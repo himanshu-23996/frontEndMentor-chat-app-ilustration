@@ -34,32 +34,57 @@
                 max-width: 75%;
                 // Background
                 background-image: linear-gradient(to right, $light-magenta, $light-violet);
-                // Display
-                display: grid;
-                grid-auto-flow: column;
-                grid-template-columns: auto 1fr auto;
-                align-content: center;
-                align-items: center;
                 &__ring {
+                    // // Background
+                    // color: transparent;
+                    // // Border 
+                    // border-radius: 50%;
+                    // border: 2px solid $very-light-magenta;
+                    // // SIzing
+                    // width: 20px;
+                    // height: 20px;
+                    display: none;
+                }
+                &__label {
+                    // Dispaly
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &__text {
+                        // Font Settings
+                        color: $pale-violet;
+                        font-size: 1rem;
+                    }
+                    &__cash {
+                        // Font Settings
+                        color: white;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                    }
+                }
+                &__label::before {
+                    content: "";
                     // Border 
                     border-radius: 50%;
                     border: 2px solid $very-light-magenta;
                     // SIzing
                     width: 20px;
                     height: 20px;
-                }
-                &__text {
-                    // Font Settings
-                    color: $pale-violet;
-                    font-size: 1rem;
                     // Positioning
-                    padding-left: rem(15);
+                    margin-left: 5%;
                 }
-                &__cash {
-                    // Font Settings
-                    color: white;
-                    font-size: 1.5rem;
-                    font-weight: 600;
+                &__ring:checked+label::before {
+                    // Border 
+                    border-radius: 50%;
+                    border: inset 5px solid transparent;
+                    background-clip: padding-box;
+                    // Background
+                    background-color: $very-light-magenta;
+                    // SIzing
+                    width: 20px;
+                    height: 20px;
+                    // Positioning
+                    margin-left: 5%;
                 }
             }
         }

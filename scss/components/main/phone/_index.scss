@@ -9,8 +9,8 @@
     // Background
     background-color: $light-grayish-violet;
     // Sizing
-    width: 95%;
     @include breakpoint(small) {
-        min-width: 380px;
+        width: 365px;
+        min-width: 365px;
     }
 }
