@@ -251,8 +251,6 @@ button {
 
 .phone__chat-section__left__price__ring:checked + label::before {
   border-radius: 50%;
-  border: inset 5px solid transparent;
-  background-clip: padding-box;
   background-color: #e570ff;
   width: 20px;
   height: 20px;

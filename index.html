@@ -89,9 +89,9 @@
                     She looks so happy! The time we discussed works. How long shall I take her out for?
                 </div>
                 <div class="phone__chat-section__left__price p1">
-                    <input name="price" form="chat-form" class="phone__chat-section__left__price__ring" type="radio" id="price-30min" checked>
-
-                    <label class="phone__chat-section__left__price__label" for="price-30min">
+                    <input name="price" form="chat-form" class="phone__chat-section__left__price__ring" type="radio" id="price-30min" value="29" checked>
+                    <!-- Cannot link input to label need help -->
+                    <label form="chat-form" class="phone__chat-section__left__price__label" for="price-30min">
                         <div class="phone__chat-section__left__price__label__text">
                             30 minute walk
                         </div>
@@ -101,8 +101,9 @@
                     </label>
                 </div>
                 <div class="phone__chat-section__left__price p2">
-                    <input name="price" form="chat-form" class="phone__chat-section__left__price__ring" type="radio" for="price-1hour">
-                    <label class="phone__chat-section__left__price__label" for="price-1hour">
+                    <input name="price" form="chat-form" class="phone__chat-section__left__price__ring" type="radio" value="49" for="price-1hour">
+                    <!-- Cannot link input to label need help -->
+                    <label form="chat-form" class="phone__chat-section__left__price__label" for="price-1hour">
                         <div class="phone__chat-section__left__price__label__text">
                             1 hour walk
                         </div>
@@ -113,7 +114,7 @@
                 </div>
 
             </section>
-            <form id="chat-form" class="phone__text-form">
+            <form action="#" id="chat-form" class="phone__text-form">
                 <input type="text" class="phone__text-form__input" placeholder="Type a message…">
                 <button type="submit" class="phone__text-form__submit">
                     <div class="phone__text-form__submit__chevron">
