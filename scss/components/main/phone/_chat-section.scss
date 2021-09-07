@@ -35,15 +35,9 @@
                 // Background
                 background-image: linear-gradient(to right, $light-magenta, $light-violet);
                 &__ring {
-                    // // Background
-                    // color: transparent;
-                    // // Border 
-                    // border-radius: 50%;
-                    // border: 2px solid $very-light-magenta;
-                    // // SIzing
-                    // width: 20px;
-                    // height: 20px;
-                    display: none;
+                    // Hiding the default radio btn
+                    opacity: 0;
+                    position: absolute;
                 }
                 &__label {
                     // Dispaly
@@ -61,6 +55,10 @@
                         font-size: 1.5rem;
                         font-weight: 600;
                     }
+                    // Hovering Effect
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
                 &__label::before {
                     content: "";
@@ -73,16 +71,9 @@
                     // Positioning
                     margin-left: 5%;
                 }
-                &__ring:checked+label::before {
-                    // Border 
-                    border-radius: 50%;
+                &__ring:checked~&__label::before {
                     // Background
                     background-color: $very-light-magenta;
-                    // SIzing
-                    width: 20px;
-                    height: 20px;
-                    // Positioning
-                    margin-left: 5%;
                 }
             }
         }
